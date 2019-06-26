@@ -24,6 +24,15 @@ $(function () {
         return oneRow;
     }
 
+    // Get request for fetching username
+    $.ajax({
+        type: 'GET',
+        url: base_url + 'users',
+        success: function (user) {
+            $('#username').html("Welcome, " + user.username + " !");
+        }
+    })
+
     $.ajax({
         type: 'GET',
         url: base_url + 'heroes',
