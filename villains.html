@@ -20,30 +20,54 @@
   </head>
   <body>
     <div class="container">
-      <h2>Login Page</h2>
-      <form class="form col-sm-6" id="login-form">
+      <h2>All Heroes</h2>
+
+      <table class="table col-sm-12">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Image</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="tblbody"></tbody>
+      </table>
+
+      <hr />
+      <h2>Add Hero</h2>
+
+      <form class="form col-sm-6" id="hero-form">
         <input
           type="text"
           class="form-control"
-          name="username"
-          id="username"
-          placeholder="Username"
+          name="name"
+          id="name"
+          placeholder="Full Name"
         />
         <br />
         <input
-          type="password"
-          name="password"
-          id="password"
+          type="text"
           class="form-control"
-          placeholder="Password"
+          name="desc"
+          id="desc"
+          placeholder="Description"
         />
         <br />
-        <button type="submit" class="btn btn-primary" id="login-btn">
-          Login!
+        <form enctype="multipart/form-data" id="fileUploadForm">
+          <input type="file" name="fileToUpload" id="fileToUpload" />
+        </form>
+        <br />
+
+        <button type="submit" class="btn btn-primary" id="add-hero">
+          Add Hero!
         </button>
       </form>
       <hr />
       <br />
+      <button id="remove-heroes" class="btn btn-danger">
+        Remove All Heroes!!
+      </button>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -63,6 +87,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="js/login.js"></script>
+    <script src="js/villains.js"></script>
   </body>
 </html>
